@@ -22,7 +22,7 @@ router.get('/:id', (req, res) => {
 // @desc Create new Entry
 router.post('/', (req, res) => {
 	const newEntry = new Entry({
-		title: req.body.title,
+		header: req.body.header,
 		description: req.body.description,
 	})
 	newEntry.save().then( entry => res.json(entry))
